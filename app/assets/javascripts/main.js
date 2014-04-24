@@ -56,7 +56,7 @@ gilucApp.controller('GilucCtrl', ['$scope', '$http', '$resource',
       var list = d.map(function(i) {
         return getItem(i.title, i.q_expected, i);
       });
-      console.log(list);
+      // console.log(list);
       $scope.items['cadeaux'] = list;
 
     });
@@ -152,7 +152,7 @@ gilucApp.controller('GilucCtrl', ['$scope', '$http', '$resource',
 
     $scope.plusOne = function(item) {
 
-      console.log(item);
+      // console.log(item);
 
       $.validator.messages.required = 'merci de saisir cette information pour pouvoir faire votre promesse de don';
 
@@ -204,7 +204,7 @@ gilucApp.controller('GilucCtrl', ['$scope', '$http', '$resource',
           // 'q_expected' : 5
         }
       }).success(function(response) {
-        console.log(response);
+        // console.log(response);
       });
 
 
