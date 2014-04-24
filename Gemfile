@@ -35,6 +35,7 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+gem 'rails_serve_static_assets', group: [:production]
 
 
 # Use ActiveModel has_secure_password
