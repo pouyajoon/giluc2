@@ -27,7 +27,7 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
-gem 'omniauth-openid', :git => 'git://github.com/intridea/omniauth-openid.git'
+# gem 'omniauth-openid', :git => 'git://github.com/intridea/omniauth-openid.git'
 
 
 group :doc do
