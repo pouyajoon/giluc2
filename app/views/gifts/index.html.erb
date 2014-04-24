@@ -1,0 +1,35 @@
+<h1>Listing gifts</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>désignation</th>
+      <th>quantité souhaitée</th>
+      <th>quantité promise</th>
+      <th>qui?</th>
+      <th>qui email ?</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @gifts.each do |gift| %>
+      <tr>
+        <td><%= gift.title %></td>
+        <td><%= gift.q_expected %></td>
+        <td><%= gift.q_have %></td>
+        <td><%= gift.who %></td>
+        <td><%= gift.whoemail %></td>
+        <td><%= link_to 'Show', gift, :class => ('btn btn-default')  %></td>
+        <td><%= link_to 'Edit', edit_gift_path(gift), :class => ('btn btn-default')  %></td>
+        <td><%= link_to 'Destroy', gift, method: :delete, data: { confirm: 'Are you sure?' }, :class => ('btn btn-default')  %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Gift', new_gift_path, :class=>('btn btn-default') %>

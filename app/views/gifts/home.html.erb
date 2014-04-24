@@ -1,0 +1,99 @@
+ <!-- <nav class="navbar navbar-default navbar-fixed-top " role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-default">
+                        <span class="sr-only">
+                            Toggle navigation
+                        </span>
+                        <span class="icon-bar">
+                        </span>
+                        <span class="icon-bar">
+                        </span>
+                        <span class="icon-bar">
+                        </span>
+                    </button>
+                    <a class="navbar-brand" href="#">GiLuc Gifts</a>
+                </div>
+                <div class="collapse navbar-collapse navbar-scrollspy" id="navbar-default">
+                    <ul class="nav navbar-nav ">
+                        <li ng-repeat="link in links">
+                            <a href="#navbar-{{link}}">{{link}}</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav> -->
+        <div class="jumbotron">
+            <h1>
+                GiLuc Gifts
+            </h1>
+            <p>
+                tu aimes bien giluc ? fais une promesse de don
+            </p>
+        </div>
+        <div>
+            <form id="form-name">
+                <div class="name-zone">
+                <label for="name">nom :</label>
+                <input id="iname" name="name" type="text" placeholder="ton nom" required/></div>
+                <div class="name-zone">
+                <label for="email">e-mail :</label>
+                <input id="iemail" name="email" type="email"  placeholder="ton e-mail" required/></div>
+            </form>
+
+        </div>
+        <div class="container" id="container">
+            <div ng-repeat="link in links" id="navbar-{{link}}">
+                <h1 id="btn-dropdowns" class="page-header">
+                    {{link}}
+                </h1>
+                <div class="panel panel-default">
+                    <table class="table">
+                        <tr>
+                            <th>
+                                désignation
+                            </th>
+                            <th class="table-q">
+                                quantité souhaitée
+                            </th>
+                            <th class="table-q">
+                                quantité promise
+                            </th>
+                            <!-- <th>k</th> -->
+
+                            <th class="table-q">
+                                promis par
+                            </th>
+                            <th class="table-q">
+                                je m'en occupe !
+                            </th>
+                        </tr>
+                        <tr ng-repeat="i in items[link]">
+                            <td>
+                                {{i.name}}
+                            </td>
+                            <td class="table-q">
+                                {{i.q}}
+                            </td>
+                            <td class="table-q">
+                                {{i.current}}
+                            </td>
+                            <td class="table-q"> {{i.item.who}}</td>
+                            <td class="table-q">
+                            
+<!--                                 <button type="button" class="btn btn-danger">
+                                    -1
+                                </button>
+ -->
+ <!-- mailto:pouyajoon@gmail.com;jeanne.delcourt@gmail.com?subject=je m'occupe de {{i.family}} / {{i.name}}&amp;body=Salut, super.    -->
+                              <a ng-if="i.current < i.q" type="button" class="btn btn-success btn-xs" ng-click="plusOne(i)">
+                                    +1
+                                </a>
+                            </td>
+                            
+                            
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>

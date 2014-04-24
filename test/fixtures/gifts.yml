@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  q_expected: 1
+  q_have: 1
+
+two:
+  title: MyString
+  q_expected: 1
+  q_have: 1

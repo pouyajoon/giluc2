@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>désignation:</strong>
+  <%= @gift.title %>
+</p>
+
+<p>
+  <strong>quantité souhaitée:</strong>
+  <%= @gift.q_expected %>
+</p>
+
+<p>
+  <strong>quantité promise:</strong>
+  <%= @gift.q_have %>
+</p>
+
+<p>
+  <strong>qui ?</strong>
+  <%= @gift.who %>
+</p>
+
+<p>
+  <strong>qui email ?</strong>
+  <%= @gift.whoemail %>
+</p>
+
+
+<%= link_to 'Edit', edit_gift_path(@gift), :class => ('btn btn-default') %> |
+<%= link_to 'Back', gifts_path, :class => ('btn btn-default') %>
